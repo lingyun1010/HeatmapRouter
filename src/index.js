@@ -1,14 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import {BrowserRouter as Router} from 'react-router-dom';
+import registerServiceWorker from './registerServiceWorker';
+import HeatmapShowcase from './HeatmapShowcase-dropbox'
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
-}
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Router><HeatmapShowcase  /></Router>, document.getElementById('root'));
+//registerServiceWorker();
